@@ -19,6 +19,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// app.use("/", (req, res, next) => {
+//   console.log("로그인 체크");
+// });
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
